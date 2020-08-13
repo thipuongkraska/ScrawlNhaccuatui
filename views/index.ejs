@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>crawl data</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Daily songs on Nhaccuatui</h1>
-    <div class=""> <% music.forEach(function() { %>
-      <img src= "<%= music.image %>" alt="">
-      <h3> <a href="<%= music.link %>"> <%= music.songTitle %> </a></h3>
-      <p> <%= music.artist %> </p>
+    <div class="song"> <% music.forEach(function(item) { %>
+      <img src= "<%= item.image %>" alt="">
+      <h3> <a href="<%= item.link %>"> <%= item.songTitle %> </a></h3>
+      <p> <%= item.artist %> </p>
     <% }) %> </div>
   </body>
 </html>

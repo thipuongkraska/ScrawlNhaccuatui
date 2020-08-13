@@ -21,6 +21,7 @@ db.on("open", () => console.log("connected to database"));
 
 const url = "https://www.nhaccuatui.com/";
 
+
 app.get("/", async (req,res) => {
   const music = await MusicSchema.find({});
   await res.render("index", {music: music});
@@ -34,4 +35,5 @@ app.get("/", async (req,res) => {
 // })();
 app.listen(3000, function() {
   console.log("server is running");
+  // console.log(myMusic);
 });
